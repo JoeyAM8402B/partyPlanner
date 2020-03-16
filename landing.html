@@ -19,13 +19,52 @@
 </head>
 
 <body>
-    <!-- add image to background-->
-    <img>
-    <container>
-        <h1> You are the DJ...</h1>
-        <a href="#"><h3> Click to start your playlist!</h3></a>
+    <!-- Container for user input-->
+    <container class="user-input">
+        <div class="search" id="user-name"></div>
+        <div class="search" id="user-song"></div>
+        <button>Submit</button>
     </container>    
+
+    <!-- Container for results from user input-->
+    <container class="search-results">
+        <row>
+        <div class="column" id="select"></div>
+        <div class="column" id="artist-name"></div>
+        <div class="column" id="song-title"></div>
+        </row>
+ 
+    </container>  
     
+    <!-- Container for music player and queue-->
+    <container>
+        <row>
+            <!-- div for the music player-->
+            <div></div>
+        </row>
+        <row>
+            <!-- string for current user name, current artist and current song-->
+            <div></div>
+        </row>
+        <row>
+            <!-- string for future user name, future artist and future song-->
+            <div></div>
+        </row>
+    </container>  
+
+    <!-- Container for album artwork-->
+    <container>
+        <img>
+        <h5> Album Information</h5>
+        <p></p>
+    </container>  
+    
+    <!-- Container for lyrics-->
+    <container>
+        <p></p>
+    </container>   
+
+     
 <script src= "script.js"></script> 
 </body>
 
