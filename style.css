@@ -1,3 +1,17 @@
+body{
+    background-color: black;
+}
+
+.jumbotron{
+    background-image: url('assets/wallpaper.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: none;
+    margin: none;
+    padding: none;
+} 
+
 h1{
-    font-size: 100px;
+    font-family: 'Fredoka One', cursive;
+    color: white;
 }
