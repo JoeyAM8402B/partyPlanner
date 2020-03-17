@@ -1,21 +1,17 @@
 // define variables
-var searchResults = document.getElementById("search-results");
+var searchButton = document.getElementById("search-button");
+var userInput = document.getElementById("user-input");
 
-
-for (var i=0; i<results; i++){
-    var firstRequestDiv = document.createElement("div");
-    currentE1.textContent= (drink + " - $" + price);
-    drinkOptions.appendChild(currentE1);
-}
-
+// Add an event listener to the searchButton
+// When the searchButton is clicked
 searchButton.addEventListener("click", function(){
-    var newDrink = drinkOrder.value;
-    var newPrice = drinkPrice.value;
-    console.log(newDrink, newPrice);
-    var newItem = {drink: newDrink, price: newPrice};
-    drinkList.push(newItem);
-
-    var currentE1 = document.createElement("div");
-    currentE1.textContent= (newDrink + " - $" + newPrice);
-    drinkOptions.appendChild(currentE1);
+    // the value of the user input is defined as the variable newRequest
+    var newRequest = userInput.value;
+    console.log(newRequest);
+    // create a div to hold the newRequest 
+    var newRequestDiv = document.createElement("div");
+    // assign text to the div
+    newRequestDiv.innerHTML= newRequest
+    // append text to the webpage so that it shows
+    document.body.appendChild(newRequestDiv);
 })
