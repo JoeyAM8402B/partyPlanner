@@ -18,6 +18,7 @@ h1{
     color: white;
 }
 
+
 /* Pulse */
 @-webkit-keyframes hvr-pulse {
     25% {
@@ -73,8 +74,12 @@ h1{
     background-image: linear-gradient(to left, #de6161, #2657eb);
 }
 
-.container-album{
-    border-color: white;
-    border-width: 10px;
+#album-cover{
+    height: 150px;
+    width: 150px;
 }
 
+h3{
+    font-family: 'Fredoka One', cursive;
+    color: white;
+}
