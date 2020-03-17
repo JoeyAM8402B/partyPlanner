@@ -13,17 +13,45 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     
+    <!-- Google Fonts link-->
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
+
     <!-- personal CSS style sheet-->
-    <script src="style.css"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
 
 </head>
 
 <body>
+    <!-- Using jumbotron as header for continuity-->
+    <div class="jumbotron sticky-top">
+        <h1 class="display-4 text-center">You are the DJ...</h1>
+        <hr class="my-4">
+        </p>
+    </div>
     <!-- Container for user input-->
-    <container class="user-input">
-        <div class="search" id="user-name"></div>
-        <div class="search" id="user-song"></div>
-        <button>Submit</button>
+    <container >
+        <form>
+            <div class = "row">
+            <div class="col-sm-12 d-flex justify-content-center">
+            <div class="form-group">
+              <label for="formGroupExampleInput">My name is...</label>
+              <input type="text" class="form-control" id="user-name" placeholder="type in your name">
+            </div>
+            </div>
+            </div>
+            <div class = "row">
+            <div class="col-sm-12 d-flex justify-content-center">
+            <div class="form-group">
+              <label for="formGroupExampleInput2">Name of an artist or song</label>
+              <input type="text" class="form-control" id="user-song" placeholder="Ex: Prince, 1999">
+            </div>
+            </div>
+            </div>
+        </form>
+
+        <div style="text-align:center">
+            <button type="button" class="btn btn-secondary btn-lg" id= "search-button">Find me something to listen to!</button>
+        </div>
     </container>    
 
     <!-- Container for results from user input-->

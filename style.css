@@ -1,3 +1,29 @@
+/* Styling for all pages*/
+body{
+    background-color: black;
+}
+
+/* Styling for index.html*/
+.jumbotron{
+    background-image: url('assets/wallpaper.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: none;
+    margin: none;
+    padding: none;
+} 
+
 h1{
-    font-size: 100px;
+    font-family: 'Fredoka One', cursive;
+    color: white;
+}
+
+/* Styling for landing.html*/
+.form-group{
+    color: white;
+}
+
+#search-button{
+    border-radius: 6px; 
+    background-image: linear-gradient(to left, #de6161, #2657eb);
 }
