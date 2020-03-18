@@ -32,12 +32,18 @@
     <container id="container-user-input">
         <form>
             <div class = "row">
-            <div class="col-sm-12 d-flex justify-content-center">
+            <div class="col-sm-6 d-flex justify-content-center">
             <div class="form-group">
-              <label for="formGroupExampleInput2">Name of an artist or song</label>
-              <input type="text" class="form-control" id="user-song" placeholder="Ex: Prince, 1999">
+              <label for="formGroupExampleInput2">Name of an artist</label>
+              <input type="text" class="form-control" id="user-input-artist" placeholder="Ex: Prince">
             </div>
             </div>
+            <div class="col-sm-6 d-flex justify-content-center">
+                <div class="form-group">
+                  <label for="formGroupExampleInput2">Name of a song</label>
+                  <input type="text" class="form-control" id="user-input-song" placeholder="Ex: 1999">
+                </div>
+                </div>
             </div>
         </form>
 
@@ -46,20 +52,43 @@
         </div>
     </container>    
 
+    <br>
     <!-- Container for results from user input-->
-    <container id="search-results">
-        <row>
+    <div class="container" id="search-results" style="text-align:center">
+        <h1>Search Results</h1>
+        <div class="row">
         <div class="column" id="select"></div>
         <div class="column" id="artist-name"></div>
         <div class="column" id="song-title"></div>
-        </row>
+        </div>
  
-    </container>  
-    
-    <!-- Container for music player and queue-->
+    </div>  
+
+    <!-- Container for selected song content-->
+    <div class="container" id="API-data">
+        <h3>Album Information</h3>
+    <div class="row">
+        <!--album artwork column-->
+        <div class="col-sm-12">
+            <img id="album-cover">
+            <ul>
+                <li>Song Name:</li>
+                <li>Album Name:</li>
+                <li>Year:</li>
+                <li>Record Label:</li>
+            </ul>
+        </div>
+        <!--lyrics column-->
+        <div class="col-sm-12">
+            <p></p>
+        </div>
+    </div>    
+    </div>   
+
+    <!-- Container for music player and queue--DO LAST->
     <container>
         <row>
-            <!-- div for the music player-->
+            <!--div for the music player-->
             <div></div>
         </row>
         <row>
@@ -71,19 +100,6 @@
             <div></div>
         </row>
     </container>  
-
-    <!-- Container for album artwork-->
-    <container id="container-album">
-        <img>
-        <h5> Album Information</h5>
-        <p></p>
-    </container>  
-    
-    <!-- Container for lyrics-->
-    <container>
-        <p></p>
-    </container>   
-
      
 <script src= "script.js"></script> 
 </body>
