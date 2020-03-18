@@ -1,6 +1,4 @@
 // define variables
-var resultsHeader = document.createElement("h1")
-var AlbumInfoHeader = document.createElement("h3")
 var searchButton = document.getElementById("search-button");
 var userInput = document.getElementById("user-input");
 var albumCover = document.getElementById("album-cover");
@@ -21,17 +19,11 @@ searchButton.addEventListener("click", function(){
     // assign text to the div
     newRequestDiv.innerHTML= newRequest
     // append text to the webpage so that it shows
-    document.body.appendChild(newRequestDiv);
+    document.getElementById("search-results").appendChild(newRequestDiv);
     newRequestDiv.setAttribute("style", "color:white");
 })
 
 // define text for the header 
-resultsHeader.textContent="Search Results";
-AlbumInfoHeader .textContent = "Album Information"
-document.body.appendChild(resultsHeader);
-document.body.appendChild(AlbumInfoHeader);
-resultsHeader.setAttribute("style", "text-align: center");
-AlbumInfoHeader.setAttribute("style", "text-align: center");
 
 
 // define the image for the image tag
