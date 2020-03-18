@@ -26,10 +26,9 @@
     <div class="jumbotron sticky-top">
         <h1 class="display-4 text-center">You are the DJ...</h1>
         <hr class="my-4">
-        </p>
     </div>
     <!-- Container for user input-->
-    <container id="container-user-input">
+    <div class="container" id="container-user-input">
         <form>
             <div class = "row">
             <div class="col-sm-6 d-flex justify-content-center">
@@ -39,53 +38,50 @@
             </div>
             </div>
             <div class="col-sm-6 d-flex justify-content-center">
-                <div class="form-group">
-                  <label for="formGroupExampleInput2">Name of a song</label>
-                  <input type="text" class="form-control" id="user-input-song" placeholder="Ex: 1999">
-                </div>
-                </div>
+            <div class="form-group">
+                <label for="formGroupExampleInput2">Name of a song</label>
+                <input type="text" class="form-control" id="user-input-song" placeholder="Ex: 1999">
+            </div>
+            </div>
             </div>
         </form>
 
         <div style="text-align:center">
             <button type="button" class="btn btn-secondary btn-lg" id= "search-button">Find me something to listen to!</button>
         </div>
-    </container>    
+    </div>    
 
     <br>
     <!-- Container for results from user input-->
     <div class="container" id="search-results" style="text-align:center">
         <h1>Search Results</h1>
-        <div class="row">
-        <div class="column" id="select"></div>
-        <div class="column" id="artist-name"></div>
-        <div class="column" id="song-title"></div>
-        </div>
- 
     </div>  
 
     <!-- Container for selected song content-->
-    <div class="container" id="API-data">
+    <div class="container" id="api-data">
         <h3>Album Information</h3>
     <div class="row">
         <!--album artwork column-->
-        <div class="col-sm-12">
-            <img id="album-cover">
+        <div class="col-sm-6">
+            <img id="album-cover" alt="" src="">
             <ul>
-                <li>Song Name:</li>
-                <li>Album Name:</li>
-                <li>Year:</li>
-                <li>Record Label:</li>
+                <li>Artist Name: 
+                    <p id="artist-name"></p>
+                </li>
+                <li>Song Name: 
+                    <p id="track-name"></p>
+                </li>
             </ul>
         </div>
         <!--lyrics column-->
-        <div class="col-sm-12">
-            <p></p>
+        <div class="col-sm-6">
+            <h3>Lyrics</h3>
+            <p id="track-text"></p>
         </div>
     </div>    
     </div>   
 
-    <!-- Container for music player and queue--DO LAST->
+    <!-- Container for music player and queue--DO LAST-->
     <container>
         <row>
             <!--div for the music player-->
