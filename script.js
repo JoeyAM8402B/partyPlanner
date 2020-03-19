@@ -8,7 +8,7 @@ var artistSong= document.getElementById("track-name");
 var lyrics = document.getElementById("track-text");
 
 // hide results container 
-//document.getElementById("api-data").style.display = "none";
+document.getElementById("api-data").style.display = "none";
 
 // Add an event listener to the searchButton
 // When the searchButton is clicked
@@ -32,7 +32,7 @@ searchButton.addEventListener("click", function(){
 
 
 // define the image for the image tag
-albumCover.setAttribute("src", "https://image.shutterstock.com/image-photo/black-vinyl-record-isolated-on-260nw-179005415.jpg");
+albumCover.setAttribute("src", "https://cdn1.vectorstock.com/i/1000x1000/07/15/music-vinyl-disk-vintage-cartoon-vector-17390715.jpg");
 
 // define text for artistName and artistSong
 artistName.textContent="Adele";
