@@ -28,7 +28,7 @@ searchButton.addEventListener("click", function(){
     newRequestButton.addEventListener("click", function(){
         
     // show results container
-    document.getElementById("api-data").style.display = "show";
+    document.getElementById("api-data").style.display = "initial";
     // run the API call to obtain the information from the user input
     var apiKey =
          "vl9xTczUbTMxXTZYXe8zLC1McGd4rQSxqoP1u1dG5T8CG0vSjjl5YI6KxM5XdcfG";
@@ -36,21 +36,20 @@ searchButton.addEventListener("click", function(){
     //console.log(artistSearch);
     var songSearch = document.getElementById('user-input-song').value;
     //console.log(songSearch);
-    var queryUrl =
+    var queryUrl = encodeURI(
           "https://orion.apiseeds.com/api/music/lyric/" +
           artistSearch +
           "/" +
           songSearch +
           "?" + "apikey=" +
-          apiKey;
+          apiKey);
         console.log(queryUrl);
-    
     $.ajax({
        url: queryUrl,
         method: "GET",
         }).then(function(response) {
         console.log(response);
-        $("newRequestButton").text(JSON.stringify(response));
+        //$("newRequestButton").text(JSON.stringify(response));
       });
     })
 
