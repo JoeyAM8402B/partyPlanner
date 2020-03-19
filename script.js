@@ -6,6 +6,7 @@ var albumCover = document.getElementById("album-cover");
 var artistName = document.getElementById("artist-name");
 var artistSong= document.getElementById("track-name");
 var lyrics = document.getElementById("track-text");
+var songURL = document.getElementById("preview-URL")
 
 // hide results container 
 document.getElementById("api-data").style.display = "none";
