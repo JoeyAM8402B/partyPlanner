@@ -14,21 +14,47 @@ document.getElementById("api-data").style.display = "none";
 // When the searchButton is clicked
 searchButton.addEventListener("click", function(){
     // the value of the user input is defined as the variable newRequest
-    var newRequest = userInputArtist.value + "-" +userInputSong.value;
+    var newRequest = userInputArtist.value + " " +userInputSong.value;
     console.log(newRequest);
     // create a div to hold the newRequest 
-    var newRequestDiv = document.createElement("div");
+    var newRequestButton = document.createElement("button");
     // assign text to the div
-    newRequestDiv.innerHTML= newRequest
+    newRequestButton.textContent= newRequest
     // append text to the webpage so that it shows
-    document.getElementById("search-results").appendChild(newRequestDiv);
-    newRequestDiv.setAttribute("style", "color:white");
-})
+    document.getElementById("search-results").appendChild(newRequestButton);
+    newRequestButton.setAttribute("style", "color:black");
 
-//set up function to display results container after selection from search results is chosen is clicked
-//function showInfo{
-    //document.getElementById("api-data").style.display = "show";
-//}
+    // When new request button is clicked
+    newRequestButton.addEventListener("click", function(){
+        
+    // show results container
+    document.getElementById("api-data").style.display = "show";
+    // run the API call to obtain the information from the user input
+    var apiKey =
+         "vl9xTczUbTMxXTZYXe8zLC1McGd4rQSxqoP1u1dG5T8CG0vSjjl5YI6KxM5XdcfG";
+    var artistSearch = document.getElementById("user-input-artist").value;
+    //console.log(artistSearch);
+    var songSearch = document.getElementById('user-input-song').value;
+    //console.log(songSearch);
+    var queryUrl =
+          "https://orion.apiseeds.com/api/music/lyric/" +
+          artistSearch +
+          "/" +
+          songSearch +
+          "?" + "apikey=" +
+          apiKey;
+        console.log(queryUrl);
+    
+    $.ajax({
+       url: queryUrl,
+        method: "GET",
+        }).then(function(response) {
+        console.log(response);
+        $("newRequestButton").text(JSON.stringify(response));
+      });
+    })
+
+})
 
 
 // define the image for the image tag
@@ -38,4 +64,3 @@ albumCover.setAttribute("src", "https://cdn1.vectorstock.com/i/1000x1000/07/15/m
 artistName.textContent="Adele";
 artistSong.textContent="Hello";
 lyrics.textContent="Hello from the other side"
-
