@@ -72,6 +72,7 @@ h1{
 #search-button{
     border-radius: 6px; 
     background-image: linear-gradient(to left, #de6161, #2657eb);
+
 }
 
 #api-data{
@@ -80,25 +81,15 @@ h1{
   font-size: 20px;
 }
 
-@-webkit-keyframes rotate {
-  from {
-    -webkit-transform: rotate(0deg);
-  }
-  to { 
-    -webkit-transform: rotate(360deg);
-  }
-}
-
-#album-cover{
-    -webkit-animation-name:            rotate; 
-    -webkit-animation-duration:        5s; 
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-timing-function: linear;
-    height: 150px;
-    width: 150px;
-}
-
 h3{
     font-family: 'Fredoka One', cursive;
-    color: white;
+    background: -webkit-linear-gradient(#de6161, #2657eb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#preview-url{
+    animation-duration: 30s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
 }

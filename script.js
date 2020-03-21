@@ -6,7 +6,7 @@ var albumCover = document.getElementById("album-cover");
 var artistName = document.getElementById("artist-name");
 var artistSong= document.getElementById("track-name");
 var lyrics = document.getElementById("track-text");
-var songURL = document.getElementById("preview-URL")
+var songURL = document.getElementById("preview-URL");
 var settings;
 
 // hide results container 
@@ -24,7 +24,7 @@ searchButton.addEventListener("click", function(){
     newRequestButton.textContent= newRequest
     // append text to the webpage so that it shows
     document.getElementById("search-results").appendChild(newRequestButton);
-    newRequestButton.setAttribute("style", "color:black");
+    newRequestButton.setAttribute("style", "border-radius: 6px");
 
     // When new request button is clicked
     newRequestButton.addEventListener("click", function(){
@@ -69,7 +69,7 @@ settings = {
   "method": "GET",
   "timeout": 0,
   "headers": {
-    "Authorization": "Bearer BQBC6iTp6a387aWxYmxFrJjTIMO3-tVtNlvn0E-lYNu8JZuRRlAAhfEtdHoBY2DLYqto5TyYDl5oq1XkaRV4T5ERB6UXuND6WXtGoYutUkxDqnIaHqogMviZiZG1NTfa2yHgHuzUBZYwQ08c"
+    "Authorization": "Bearer BQC2-_s4gUPsLQH0tU8QA9OnpSzUAywqHu4tlueb1zi6nmz_C3xZvlOvElmR94S6ByaJUhnAoT0ya4WEPSHlT0m9b4fBdSSgoldIKNLv2pdmTwIvhEMNkA2Mo-gcePwhrfRMa44rZ6e--i_V"
   },
 };
 $.ajax(settings).done(function (response, error) {
@@ -81,9 +81,9 @@ $.ajax(settings).done(function (response, error) {
 });
 }
 
-// define the image for the image tag
-albumCover.setAttribute("src", "https://cdn1.vectorstock.com/i/1000x1000/07/15/music-vinyl-disk-vintage-cartoon-vector-17390715.jpg");
+// function to start animation on music player when audio is clicked
+songURL.addEventListener("click", function(){
+    songURL.classList.add('animated', 'heartBeat');
+});
 
-// define text for artistName and artistSong
-
-
+//songURL.classList.add('animated', 'heartBeat');
