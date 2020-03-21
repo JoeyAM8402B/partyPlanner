@@ -7,6 +7,7 @@ var artistName = document.getElementById("artist-name");
 var artistSong= document.getElementById("track-name");
 var lyrics = document.getElementById("track-text");
 var songURL = document.getElementById("preview-URL")
+var settings;
 
 // hide results container 
 document.getElementById("api-data").style.display = "none";
@@ -49,18 +50,40 @@ searchButton.addEventListener("click", function(){
        url: queryUrl,
         method: "GET",
         }).then(function(response) {
-        console.log(response);
-        //$("newRequestButton").text(JSON.stringify(response));
+        //console.log(response);
+        artistName.textContent= response.result.artist.name;
+        artistSong.textContent= response.result.track.name;
+        lyrics.textContent= response.result.track.text;
+        runSpotify();
       });
     })
-
 })
-
+//Spotify function to pull the audio file
+function runSpotify(){
+var inputArtistSearch = document.getElementById ("user-input-artist").value;
+//console.log(inputArtistSearch);
+var inputSongSearch = document.getElementById ("user-input-song").value;
+//console.log(inputSongSearch);
+settings = {
+  "url": "https://api.spotify.com/v1/search?q=" + inputArtistSearch + " " + inputSongSearch +"&type=track&limit=1",
+  "method": "GET",
+  "timeout": 0,
+  "headers": {
+    "Authorization": "Bearer BQBC6iTp6a387aWxYmxFrJjTIMO3-tVtNlvn0E-lYNu8JZuRRlAAhfEtdHoBY2DLYqto5TyYDl5oq1XkaRV4T5ERB6UXuND6WXtGoYutUkxDqnIaHqogMviZiZG1NTfa2yHgHuzUBZYwQ08c"
+  },
+};
+$.ajax(settings).done(function (response, error) {
+  console.log(response, error);
+  const audioClip =  response.tracks.items['0'].preview_url
+  console.log(audioClip)
+  
+  $("#preview-URL").attr("src", audioClip);
+});
+}
 
 // define the image for the image tag
 albumCover.setAttribute("src", "https://cdn1.vectorstock.com/i/1000x1000/07/15/music-vinyl-disk-vintage-cartoon-vector-17390715.jpg");
 
 // define text for artistName and artistSong
-artistName.textContent="Adele";
-artistSong.textContent="Hello";
-lyrics.textContent="Hello from the other side"
+
+
