@@ -11,6 +11,7 @@ Currently, users aren't able to go to one place to get the lyrics for any songs 
 # Screenshots
 
 # Tech/framework used
+HTML, CSS, Spotify API, APISeeds Lyrics, Javascript, jQuery, Bootstrap
 
 # Features
 
