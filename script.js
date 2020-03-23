@@ -8,6 +8,7 @@ var artistSong= document.getElementById("track-name");
 var lyrics = document.getElementById("track-text");
 var songURL = document.getElementById("preview-URL");
 var settings;
+var audioClip;
 
 // hide results container 
 document.getElementById("api-data").style.display = "none";
@@ -69,12 +70,12 @@ settings = {
   "method": "GET",
   "timeout": 0,
   "headers": {
-    "Authorization": "Bearer BQC2-_s4gUPsLQH0tU8QA9OnpSzUAywqHu4tlueb1zi6nmz_C3xZvlOvElmR94S6ByaJUhnAoT0ya4WEPSHlT0m9b4fBdSSgoldIKNLv2pdmTwIvhEMNkA2Mo-gcePwhrfRMa44rZ6e--i_V"
+    "Authorization": "Bearer BQAZ_gXkqwdFoiv-c0Ct5159U2iZiJdqoHW3reUVZmh6famnXtmYCDDcYwlw9pkxdx9rcQBcrKO036D31Ms1d8xbrbl-5USSAXviDDQZRVEpNBBiegM1CDAhA69cqYoLIP4zHHQnbNmlOAWy"
   },
 };
 $.ajax(settings).done(function (response, error) {
   console.log(response, error);
-  const audioClip =  response.tracks.items['0'].preview_url
+  audioClip =  response.tracks.items['0'].preview_url
   console.log(audioClip)
   
   $("#preview-URL").attr("src", audioClip);

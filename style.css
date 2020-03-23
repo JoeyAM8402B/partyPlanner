@@ -79,10 +79,13 @@ h1{
   font-family: 'Fredoka One', cursive;
   color:white;
   font-size: 20px;
+  text-align: center;
+  padding: 50px;
 }
 
 h3{
     font-family: 'Fredoka One', cursive;
+    text-align: center;
     background: -webkit-linear-gradient(#de6161, #2657eb);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
