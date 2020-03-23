@@ -16,14 +16,13 @@ There is no need for a separate installation to use this application.  Navigate 
 # API Reference
 Two APIs were used for this project (API Seeds and Spotify).  API Seeds is used to obtain the artist name, artist song, and lyrics for the particular song.  Spotify is used to obtain a 30 second snippet of the song.
 
-
 # How to use
-Enter in the name of an artist and the song that you would like to hear.  Click on the button to get to the song and the lyrics will also display.  
+Enter in the name of an artist and the song that you would like to hear.  Click on the result to display the artist name, song name, lyrics and a 30 second snippet of the song.  The media player allows you to start and stop the song at your discretion.  
 
 # Future Additions
 Future applications include a next up function where different users can submit songs that they want to sing to the queue as well as saving set playlists for future use.  
 * Fixing and utilising /n received from API to have lyrics split instead of showing one big block
 * Ability to queue songs dynamically without interrupting current song that is playing.
-* Add containers to show list of upcomign singers that have already their selection
+* Add containers to show list of upcoming singers that have already made their selection
 * Add pulsing effect to player whilst song is playing
 * Allow for archiving the list of choices for future use by user
