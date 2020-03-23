@@ -8,6 +8,7 @@ var artistSong= document.getElementById("track-name");
 var lyrics = document.getElementById("track-text");
 var songURL = document.getElementById("preview-URL");
 var settings;
+var audioClip;
 
 // hide results container 
 document.getElementById("api-data").style.display = "none";
@@ -74,7 +75,7 @@ settings = {
 };
 $.ajax(settings).done(function (response, error) {
   console.log(response, error);
-  const audioClip =  response.tracks.items['0'].preview_url
+  audioClip =  response.tracks.items['0'].preview_url
   console.log(audioClip)
   
   $("#preview-URL").attr("src", audioClip);
