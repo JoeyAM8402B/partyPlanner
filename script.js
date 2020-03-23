@@ -70,7 +70,7 @@ settings = {
   "method": "GET",
   "timeout": 0,
   "headers": {
-    "Authorization": "Bearer BQAZ_gXkqwdFoiv-c0Ct5159U2iZiJdqoHW3reUVZmh6famnXtmYCDDcYwlw9pkxdx9rcQBcrKO036D31Ms1d8xbrbl-5USSAXviDDQZRVEpNBBiegM1CDAhA69cqYoLIP4zHHQnbNmlOAWy"
+    "Authorization": "Bearer here’s the new key BQD8g_lkn9T6h7EGEgdPdhNU3hfUyNY3cmr-lSbBuTMEYfmnHlXVinagEJJnUkVrC4SFYbZn2UjzXHsatrT9eo_J5m2c0Jn7_dLKHzZkkjrH9r31k-ya8E4c8QhJcVY59W0RbGa5V_grrMuB"
   },
 };
 $.ajax(settings).done(function (response, error) {
