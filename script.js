@@ -69,7 +69,7 @@ settings = {
   "method": "GET",
   "timeout": 0,
   "headers": {
-    "Authorization": "Bearer BQD5PTevlkQmwklMDeaJL2cZLkLt8gooYi2ghkpFI9QMHx2g7cwjv-rRu0pgWNhA6OejKnGA_Wd5izAOrjlgnS9xNA8B4ca0HhwKrwijy8TAY0ki4gXOx0Xl77oRbJ1LAb9osBlCou0gJMM-"
+    "Authorization": "Bearer BQAZ_gXkqwdFoiv-c0Ct5159U2iZiJdqoHW3reUVZmh6famnXtmYCDDcYwlw9pkxdx9rcQBcrKO036D31Ms1d8xbrbl-5USSAXviDDQZRVEpNBBiegM1CDAhA69cqYoLIP4zHHQnbNmlOAWy"
   },
 };
 $.ajax(settings).done(function (response, error) {
